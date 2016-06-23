@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,22 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RE4-jE-ql4">
-                                <rect key="frame" x="200" y="100" width="200" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RE4-jE-ql4">
+                                <rect key="frame" x="200" y="100" width="200" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RE4-jE-ql4" secondAttribute="height" multiplier="200:99" id="dAc-r4-qhq"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1l-dV-eiP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZp-x3-9ln">
-                                <rect key="frame" x="200" y="360" width="200" height="100"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZp-x3-9ln">
+                                <rect key="frame" x="200" y="359" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NZp-x3-9ln" secondAttribute="height" multiplier="2:1" id="UIU-id-UvG"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFt-bg-jO3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW1-BM-eRk">
-                                <rect key="frame" x="200" y="230" width="200" height="100"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW1-BM-eRk">
+                                <rect key="frame" x="200" y="229" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GW1-BM-eRk" secondAttribute="height" multiplier="2:1" id="ecs-lZ-Y0q"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y0P-F7-Wtb"/>
@@ -42,7 +52,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GW1-BM-eRk" firstAttribute="centerX" secondItem="RE4-jE-ql4" secondAttribute="centerX" id="0G2-KD-0YV"/>
+                            <constraint firstItem="NZp-x3-9ln" firstAttribute="height" secondItem="GW1-BM-eRk" secondAttribute="height" id="9RB-LW-0nm"/>
                             <constraint firstItem="NZp-x3-9ln" firstAttribute="centerX" secondItem="GW1-BM-eRk" secondAttribute="centerX" id="Da4-I9-hgv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NZp-x3-9ln" secondAttribute="bottom" constant="20" id="Mcq-ZU-fx1"/>
+                            <constraint firstItem="GW1-BM-eRk" firstAttribute="height" secondItem="RE4-jE-ql4" secondAttribute="height" id="QfW-oB-jzF"/>
                             <constraint firstItem="NZp-x3-9ln" firstAttribute="top" secondItem="GW1-BM-eRk" secondAttribute="bottom" constant="30" id="SBf-XX-2H9"/>
                             <constraint firstItem="RE4-jE-ql4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fil-E7-OTv"/>
                             <constraint firstItem="GW1-BM-eRk" firstAttribute="top" secondItem="RE4-jE-ql4" secondAttribute="bottom" constant="30" id="tyT-Ni-5PQ"/>
